@@ -1,9 +1,9 @@
 import React from 'react'
 //import "./Square.scss"
-const Square = ({value, onClick}) => {
+const Square = ({value, onClick, isWinningSquare}) => {
   
   return (
-    <button type="button"  className="square" onClick={onClick}>{value}</button>
+    <button style={{fontWeight: isWinningSquare ?'bold':'normal' }} type="button"  className="square" onClick={onClick}>{value}</button>
   );
 };
 
