@@ -1,10 +1,15 @@
-import React from 'react'
+import React from 'react';
 //import "./Square.scss"
-const Square = ({value, onClick, isWinningSquare}) => {
-  
+const Square = ({ value, onClick, isWinningSquare }) => {
   return (
-    <button style={{fontWeight: isWinningSquare ?'bold':'normal' }} type="button"  className="square" onClick={onClick}>{value}</button>
+    <button
+      type="button"
+      className={`square ${isWinningSquare ? 'winning':''} ${value==='X' ? 'text-green' : 'text-orange'}`}
+      onClick={onClick}
+    >
+      {value}
+    </button>
   );
 };
 
-export default Square
+export default Square;
